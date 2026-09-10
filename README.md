@@ -10,6 +10,10 @@ After loading cars, complete the following operations.
 the first data row is row 1.  
 **c.** From `cars_6_to_10`, display only the columns `Model`, `mpg`, `cyl`, `hp`, and `gear`, in that order.
 
+`df.iloc([0],[0])` - used in this problem to select which rows and columns of data frame `cars` would be copied to new data frame `cars_6_to_10`.
+`df.shape` - 
+`df.columns` - 
+`df.loc[[0],['column_name']]` - 
 ```python
 cars = pd.read_csv('cars.csv')
 cars_6_to_10 = cars.iloc[5:10, [0, 1, 2, 4, 10]]
@@ -24,6 +28,7 @@ Use Boolean indexing on the `Model` column to answer both requests.
 
 Store the two results in `toyota` and `pontiac`, respectively. Do not use a hard-coded row number to locate either model.
 
+No new functions were used in this problem. 
 ```python
 toyota = cars.loc[cars['Model']=='Toyota Corolla']
 pontiac = cars.loc[cars['Model']=='Pontiac Firebird', ['Model', 'mpg', 'hp', 'wt']]
@@ -45,3 +50,4 @@ selected_cars
 
 **README File Version History:**  
 September 8, 2026 - Initial README output  
+September 10, 2026 - Added some solution explanations
